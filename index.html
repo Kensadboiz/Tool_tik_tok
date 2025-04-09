@@ -1,1 +1,30 @@
-<!DOCTYPE html><html><head><title>Tool TikTok</title></head><body><div id='root'></div><script src='bundle.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tool TikTok</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Tool TikTok</h1>
+        <h2>Tải video TikTok</h2>
+        <input type="text" id="videoUrl" placeholder="Dán link TikTok vào đây" />
+        <button onclick="downloadFromTikTok()">Tải về (Snaptik)</button>
+
+        <h2>Hoặc chọn video từ máy</h2>
+        <input type="file" id="fileInput" accept="video/*" />
+        <button onclick="uploadLocalVideo()">Tải lên</button>
+
+        <h2>Cắt video</h2>
+        <input type="number" id="start" placeholder="Thời gian bắt đầu (giây)" />
+        <input type="number" id="end" placeholder="Thời gian kết thúc (giây)" />
+        <button onclick="cutVideo()">Cắt video</button>
+
+        <h2>Lịch sử cắt video</h2>
+        <ul id="historyList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
