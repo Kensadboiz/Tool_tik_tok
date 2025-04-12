@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý chi tiêu</title>
+  <link rel="stylesheet" href="quanly.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quản lý chi tiêu</h1>
+
+    <form id="transaction-form">
+      <input type="text" id="desc" placeholder="Nội dung" required>
+      <input type="number" id="amount" placeholder="Số tiền" required>
+      <select id="type">
+        <option value="income">Thu</option>
+        <option value="expense">Chi</option>
+      </select>
+      <button type="submit">Thêm</button>
+    </form>
+
+    <div class="summary">
+      <p>Tổng thu: <span id="total-income">0</span> đ</p>
+      <p>Tổng chi: <span id="total-expense">0</span> đ</p>
+      <p>Số dư: <span id="balance">0</span> đ</p>
+    </div>
+
+    <ul id="transaction-list"></ul>
+  </div>
+
+  <script src="quanly.js"></script>
+</body>
+</html>
