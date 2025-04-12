@@ -1,34 +1,64 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quản lý chi tiêu</title>
-  <link rel="stylesheet" href="quanly.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Chi Tiêu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-  <div class="container">
-    <h1>Quản lý chi tiêu</h1>
-
-    <form id="transaction-form">
-      <input type="text" id="desc" placeholder="Nội dung" required>
-      <input type="number" id="amount" placeholder="Số tiền" required>
-      <select id="type">
-        <option value="income">Thu</option>
-        <option value="expense">Chi</option>
-      </select>
-      <button type="submit">Thêm</button>
-    </form>
-
-    <div class="summary">
-      <p>Tổng thu: <span id="total-income">0</span> đ</p>
-      <p>Tổng chi: <span id="total-expense">0</span> đ</p>
-      <p>Số dư: <span id="balance">0</span> đ</p>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">
+        <div class="flex items-center">
+            <i class="fas fa-arrow-left cursor-pointer"></i>
+            <h1 class="text-xl font-bold ml-2">Quản Lý Chi Tiêu</h1>
+        </div>
+        <!-- Tổng quan chi tiêu -->
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <div class="bg-blue-600 p-4 rounded-lg text-center">
+                <i class="fas fa-wallet text-xl"></i>
+                <p class="mt-2">Tổng Thu Nhập</p>
+                <p id="total-income" class="text-2xl font-bold">0 đ</p>
+            </div>
+            <div class="bg-blue-600 p-4 rounded-lg text-center">
+                <i class="fas fa-balance-scale text-xl"></i>
+                <p class="mt-2">Số Dư</p>
+                <p id="balance" class="text-2xl font-bold">0 đ</p>
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="bg-blue-600 p-4 rounded-lg text-center">
+                <i class="fas fa-chart-line text-xl"></i>
+                <p class="mt-2">Tổng Chi Tiêu</p>
+                <p id="total-expense" class="text-2xl font-bold">0 đ</p>
+            </div>
+        </div>
     </div>
 
-    <ul id="transaction-list"></ul>
-  </div>
+    <!-- Form thêm giao dịch -->
+    <div class="bg-white p-4 mt-4 rounded-lg shadow-md">
+        <h2 class="text-blue-600 font-bold mb-4">Thêm Giao Dịch</h2>
+        <form id="transaction-form" class="space-y-4">
+            <input type="text" id="desc" placeholder="Mô tả giao dịch" class="w-full p-2 border rounded-lg" required>
+            <input type="number" id="amount" placeholder="Số tiền (VND)" class="w-full p-2 border rounded-lg" required>
+            <select id="type" class="w-full p-2 border rounded-lg">
+                <option value="income">Thu Nhập</option>
+                <option value="expense">Chi Tiêu</option>
+            </select>
+            <button type="submit" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg w-full hover:bg-blue-700">
+                Thêm Giao Dịch
+            </button>
+        </form>
+    </div>
 
-  <script src="quanly.js"></script>
+    <!-- Danh sách giao dịch -->
+    <div class="bg-white p-4 mt-4 rounded-lg shadow-md">
+        <h2 class="text-blue-600 font-bold mb-4">Danh Sách Giao Dịch</h2>
+        <input type="text" id="search" placeholder="Tìm kiếm giao dịch..." class="w-full p-2 border rounded-lg mb-4">
+        <ul id="transaction-list" class="space-y-2">
+            <!-- Các giao dịch sẽ hiển thị tại đây -->
+        </ul>
+    </div>
 </body>
 </html>
