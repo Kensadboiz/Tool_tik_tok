@@ -1,0 +1,56 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #ecf0f1;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+h1 {
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+form input, form select, form button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+form button {
+  background: #00b894;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.summary {
+  background: #dfe6e9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+#transaction-list {
+  list-style: none;
+  padding: 0;
+}
+#transaction-list li {
+  padding: 10px;
+  margin: 6px 0;
+  background: #f1f2f6;
+  border-left: 6px solid;
+}
+.income {
+  border-color: #00b894;
+}
+.expense {
+  border-color: #d63031;
+}
