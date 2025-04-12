@@ -1,58 +1,49 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản Lý Chi Tiêu</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body class="bg-gray-100">
-    <!-- Header -->
-    <div class="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">
-        <div class="flex items-center">
-            <i class="fas fa-arrow-left cursor-pointer"></i>
-            <h1 class="text-xl font-bold ml-2">Quản Lý Chi Tiêu</h1>
-        </div>
-        <!-- Tổng quan chi tiêu -->
-        <div class="grid grid-cols-2 gap-4 mt-4">
-            <div class="bg-blue-600 p-4 rounded-lg text-center">
-                <i class="fas fa-wallet text-xl"></i>
-                <p class="mt-2">Tổng Thu Nhập</p>
-                <p id="total-income" class="text-2xl font-bold">0 đ</p>
-            </div>
-            <div class="bg-blue-600 p-4 rounded-lg text-center">
-                <i class="fas fa-chart-line text-xl"></i>
-                <p class="mt-2">Tổng Chi Tiêu</p>
-                <p id="total-expense" class="text-2xl font-bold">0 đ</p>
-            </div>
-        </div>
-        <p id="balance" class="text-center text-white font-bold mt-4">Số Dư: 0 đ</p>
-    </div>
+/* Cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+}
 
-    <!-- Form thêm giao dịch -->
-    <div class="bg-white p-4 mt-4 rounded-lg shadow-md">
-        <h2 class="text-blue-600 font-bold mb-4">Thêm Giao Dịch</h2>
-        <form id="transaction-form" class="space-y-4">
-            <input type="text" id="desc" placeholder="Mô tả giao dịch" class="w-full p-2 border rounded-lg" required>
-            <input type="number" id="amount" placeholder="Số tiền (VND)" class="w-full p-2 border rounded-lg" required>
-            <select id="type" class="w-full p-2 border rounded-lg">
-                <option value="income">Thu Nhập</option>
-                <option value="expense">Chi Tiêu</option>
-            </select>
-            <button type="submit" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg w-full hover:bg-blue-700">
-                Thêm Giao Dịch
-            </button>
-        </form>
-    </div>
+/* Tổng quan chi tiêu */
+.bg-gradient-to-r {
+    background: linear-gradient(to right, #4c82fb, #9a5cfd);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-    <!-- Danh sách giao dịch -->
-    <div class="bg-white p-4 mt-4 rounded-lg shadow-md">
-        <h2 class="text-blue-600 font-bold mb-4">Danh Sách Giao Dịch</h2>
-        <input type="text" id="search" placeholder="Tìm kiếm giao dịch..." class="w-full p-2 border rounded-lg mb-4">
-        <ul id="transaction-list" class="space-y-2">
-            <!-- Các giao dịch sẽ hiển thị tại đây -->
-        </ul>
-    </div>
-</body>
-</html>
+.bg-blue-600 {
+    background-color: #4c82fb;
+    color: white;
+}
+
+.rounded-lg {
+    border-radius: 8px;
+}
+
+.text-white {
+    color: white;
+}
+
+/* Nút */
+button {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Lịch giao dịch */
+#transaction-calendar li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
