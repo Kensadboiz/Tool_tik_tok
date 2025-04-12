@@ -1,4 +1,4 @@
-/* Cơ bản */
+/* Toàn cục */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +6,7 @@ body {
     background-color: #f7f9fc;
 }
 
-/* Tổng quan chi tiêu */
+/* Phần tổng quan chi tiêu */
 .bg-gradient-to-r {
     background: linear-gradient(to right, #4c82fb, #9a5cfd);
     color: white;
@@ -23,10 +23,6 @@ body {
     border-radius: 8px;
 }
 
-.text-white {
-    color: white;
-}
-
 /* Nút */
 button {
     cursor: pointer;
@@ -37,6 +33,7 @@ button:hover {
     transform: scale(1.05);
 }
 
+/* Ẩn form */
 .hidden {
     display: none;
 }
