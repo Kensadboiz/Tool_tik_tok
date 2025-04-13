@@ -1,41 +1,116 @@
+/* Tổng thể */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #fefefe;
+  font-family: Arial, sans-serif;
+  background-color: #e8f5e9; /* Màu xanh ngọc nhạt */
   color: #333;
 }
-header {
+
+/* Header */
+.header {
+  background-color: #2ecc71; /* Xanh ngọc đậm */
+  padding: 16px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
-  background: #00b894;
-  color: white;
+  justify-content: space-between;
 }
-.logo {
-  font-weight: bold;
-  font-size: 20px;
+
+.title {
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 0;
 }
-.menu-toggle {
+
+/* Hamburger Menu Button */
+.menu-button {
   background: none;
   border: none;
-  font-size: 26px;
-  color: white;
-}
-nav {
+  cursor: pointer;
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  padding: 0;
+  transition: transform 0.2s ease-out;
 }
-nav.hidden {
-  display: none;
+
+.menu-button:focus {
+  outline: none;
 }
-nav a {
-  color: white;
+
+.menu-button:hover {
+  transform: scale(1.1);
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Menu */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #27ae60; /* Xanh ngọc */
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  will-change: transform;
+  z-index: 10;
+}
+
+.menu.show {
+  transform: translateX(0);
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-bottom: 16px;
+}
+
+.menu-list a {
+  color: #fff;
   text-decoration: none;
+  font-size: 1.1rem;
   font-weight: bold;
+  transition: color 0.2s ease;
 }
-main {
-  padding: 40px;
+
+.menu-list a:hover {
+  color: #d1ecf1;
+}
+
+/* Nội dung */
+.section {
+  padding: 40px 20px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #2ecc71; /* Xanh ngọc đậm */
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #27ae60; /* Xanh ngọc */
+  color: #fff;
   text-align: center;
+  padding: 16px 0;
+  margin-top: 20px;
 }
