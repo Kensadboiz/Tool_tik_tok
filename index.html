@@ -1,27 +1,64 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Trang Cá Nhân</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Giới Thiệu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo">KEN</div>
-    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-    <nav id="menu" class="hidden">
-      <a href="button.html">Liên kết</a>
-      <a href="quanly.html">Quản lý chi tiêu</a>
-    </nav>
+  <!-- Header với nút hamburger -->
+  <header class="header">
+    <button id="menu-toggle" class="menu-button" aria-label="Toggle menu">
+      <!-- Biểu tượng 3 gạch -->
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <h1 class="title">Ken</h1>
   </header>
 
+  <!-- Menu Hamburger -->
+  <nav id="menu" class="menu">
+    <ul class="menu-list">
+      <li><a href="#about">Giới Thiệu</a></li>
+      <li><a href="#skills">Kỹ Năng</a></li>
+      <li><a href="#contact">Liên Hệ</a></li>
+      <li><a href="button.html">Liên Kết 2</a></li>
+      <li><a href="quanly.html">Quản Lý Chi Tiêu</a></li>
+    </ul>
+  </nav>
+
+  <!-- Nội dung chính -->
   <main>
-    <h1>Chào mừng đến với trang cá nhân của bạn</h1>
-    <p>Quản lý liên kết & chi tiêu dễ dàng</p>
+    <!-- Giới Thiệu -->
+    <section id="about" class="section">
+      <h2>Về Tôi</h2>
+      <p>Chào mừng bạn đến với trang giới thiệu của tôi. Tôi là Ken, một người đam mê học hỏi và sáng tạo không ngừng.</p>
+    </section>
+
+    <!-- Kỹ Năng -->
+    <section id="skills" class="section">
+      <h2>Kỹ Năng</h2>
+      <ul>
+        <li>Lập trình</li>
+        <li>Giao tiếp</li>
+        <li>Thiết kế sáng tạo</li>
+      </ul>
+    </section>
+
+    <!-- Liên Hệ -->
+    <section id="contact" class="section">
+      <h2>Liên Hệ</h2>
+      <p>Email: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+      <p>Số điện thoại: 0123 456 789</p>
+    </section>
   </main>
 
-  <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Ken. Tất cả các quyền được bảo lưu.</p>
+  </footer>
 </body>
 </html>
