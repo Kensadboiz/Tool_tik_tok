@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quản Lý Chi Tiêu</title>
-  <link rel="stylesheet" href="quanly.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="quanly.css">
   <script defer src="quanly.js"></script>
 </head>
 <body class="bg-gray-100">
@@ -15,14 +16,17 @@
     <!-- Tổng quan -->
     <div class="bg-white p-4 rounded shadow text-blue-700 mb-4">
       <div class="grid grid-cols-1 gap-4 text-center">
+        <!-- Thu Nhập -->
         <div class="p-4 bg-green-100 rounded-lg shadow">
           <p class="text-sm font-semibold text-green-800">Tổng Thu Nhập</p>
           <p id="total-income" class="text-2xl font-bold text-green-600">0 đ</p>
         </div>
+        <!-- Chi Tiêu -->
         <div class="p-4 bg-red-100 rounded-lg shadow">
           <p class="text-sm font-semibold text-red-800">Tổng Chi Tiêu</p>
           <p id="total-expense" class="text-2xl font-bold text-red-600">0 đ</p>
         </div>
+        <!-- Số Dư -->
         <div class="p-4 bg-blue-100 rounded-lg shadow">
           <p class="text-sm font-semibold text-blue-800">Số Dư</p>
           <p id="balance" class="text-2xl font-bold text-blue-600">0 đ</p>
@@ -41,7 +45,7 @@
       <h2 class="text-xl font-bold mb-2 text-blue-700">Thêm Giao Dịch</h2>
       <form id="transaction-form" class="space-y-2">
         <input type="text" id="desc" placeholder="Mô tả giao dịch" class="w-full p-2 border rounded" required>
-        <input type="text" id="amount" placeholder="Số tiền" class="w-full p-2 border rounded" required>
+        <input type="number" id="amount" placeholder="Số tiền" class="w-full p-2 border rounded" required>
         <select id="type" class="w-full p-2 border rounded" required>
           <option value="income">Thu Nhập</option>
           <option value="expense">Chi Tiêu</option>
@@ -62,7 +66,7 @@
       <h2 class="text-xl font-bold mb-2 text-blue-700">Chỉnh Sửa Chi Tiết</h2>
       <form id="edit-transaction-detail-form" class="space-y-2">
         <input type="text" id="edit-desc" placeholder="Mô tả giao dịch" class="w-full p-2 border rounded" required>
-        <input type="text" id="edit-amount" placeholder="Số tiền" class="w-full p-2 border rounded" required>
+        <input type="number" id="edit-amount" placeholder="Số tiền" class="w-full p-2 border rounded" required>
         <select id="edit-type" class="w-full p-2 border rounded" required>
           <option value="income">Thu Nhập</option>
           <option value="expense">Chi Tiêu</option>
